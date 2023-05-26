@@ -1,0 +1,24 @@
+{
+  "name": "mojl-terser",
+  "version": "1.0.0",
+  "description": "An adaptor for using terser with mojl",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "npx mocha"
+  },
+  "keywords": [],
+  "repository": "github:thomasperi/mojl-terser",
+  "author": "Thomas Peri <hello@thomasperi.net>",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "mojl": "^2.0.0-alpha.4",
+    "sandbox-clone": "^1.0.2"
+  },
+  "dependencies": {
+    "terser": "^5.17.6"
+  }
+}
