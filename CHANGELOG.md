@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-- Switched to real mojl in tests
+- Test without mojl itself
 
 
 ## [1.0.0-alpha.0] - 2023-08-14

@@ -1,28 +1,28 @@
 /*global describe, it */
 const assert = require('assert');
-const fs = require('fs'); // eslint-disable-line no-unused-vars
 const path = require('path').posix; // eslint-disable-line no-unused-vars
-const DirectoryTester = require('../DirectoryTester.js');
-const { name, cloneRun } = new DirectoryTester(__filename);
 
-const Mojl = require('mojl');
-const jsMinifierAdaptor = path.join(__dirname, '../index.js');
+const jsMinifierAdapter = require('../index.js');
 
-describe(name, async () => {
-
+describe('mojl-terser tests', async () => {
 	it('should minify scripts', async () => {
-		await cloneRun(async (base, box) => { // eslint-disable-line no-unused-vars
-			const mojl = new Mojl({
-				jsMinifierAdaptor
-			});
-			await mojl.build();
-			
-			const after = box.snapshot();
-			const pattern = /^function add\((\w),(\w)\)\{return \1\+\2}function subtract\((\w),(\w)\)\{return \3-\4}$/;
-			assert(pattern.test(after['dist/site.js']));
-			
-		});
-	});
+		
+		let source = `
+			// Add two numbers
+			function add(addend1, addend2) {
+				return addend1 + addend2;
+			}
 
+			// Subtract one number from another
+			function subtract(minuend, subtrahend) {
+				return minuend - subtrahend;
+			}
+		`;
+		
+		let actual = await jsMinifierAdapter(source);
+		let expected = /^function add\((\w),(\w)\)\{return \1\+\2}function subtract\((\w),(\w)\)\{return \3-\4}$/;
+		assert(expected.test(actual));
+
+	});
 });
 

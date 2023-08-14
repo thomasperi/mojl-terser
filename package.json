@@ -14,9 +14,7 @@
   "author": "Thomas Peri <hello@thomasperi.net>",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^10.2.0",
-    "mojl": "^2.0.0-alpha.5",
-    "sandbox-clone": "^1.0.2"
+    "mocha": "^10.2.0"
   },
   "dependencies": {
     "terser": "^5.19.2"
