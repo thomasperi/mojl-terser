@@ -20,7 +20,7 @@ describe(name, async () => {
 			
 			const after = box.snapshot();
 			const pattern = /^function add\((\w),(\w)\)\{return \1\+\2}function subtract\((\w),(\w)\)\{return \3-\4}$/;
-			assert(pattern.test(after['dist/scripts.js']));
+			assert(pattern.test(after['dist/site.js']));
 			
 		});
 	});

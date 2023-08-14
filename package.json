@@ -15,10 +15,10 @@
   "license": "ISC",
   "devDependencies": {
     "mocha": "^10.2.0",
-    "mojl": "^2.0.0-alpha.4",
+    "mojl": "^2.0.0-alpha.5",
     "sandbox-clone": "^1.0.2"
   },
   "dependencies": {
-    "terser": "^5.17.6"
+    "terser": "^5.19.2"
   }
 }
