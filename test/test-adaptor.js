@@ -5,8 +5,7 @@ const path = require('path').posix; // eslint-disable-line no-unused-vars
 const DirectoryTester = require('../DirectoryTester.js');
 const { name, cloneRun } = new DirectoryTester(__filename);
 
-// to-do: use real mojl release
-const Mojl = require('../../git-mojl');
+const Mojl = require('mojl');
 const jsMinifierAdaptor = path.join(__dirname, '../index.js');
 
 describe(name, async () => {
